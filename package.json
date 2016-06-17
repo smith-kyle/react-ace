@@ -1,5 +1,5 @@
 {
-  "name": "react-ace-2",
+  "name": "react-ace",
   "version": "3.4.1",
   "description": "A react component for Ace Editor",
   "main": "lib/ace.js",
