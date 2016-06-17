@@ -104,10 +104,10 @@ export default class ReactAce extends Component {
     }
 
     if (nextProps.mode !== oldProps.mode) {
-      this.editor.getSession().setMode('ace/mode/' + nextProps.mode);
+      this.editor.getSession().setMode(nextProps.mode);
     }
     if (nextProps.theme !== oldProps.theme) {
-      this.editor.setTheme('ace/theme/' + nextProps.theme);
+      this.editor.setTheme(nextProps.theme);
     }
     if (nextProps.fontSize !== oldProps.fontSize) {
       this.editor.setFontSize(nextProps.fontSize);
@@ -260,3 +260,5 @@ ReactAce.defaultProps = {
   enableBasicAutocompletion: false,
   enableLiveAutocompletion: false,
 };
+
+module.exports = ReactAce;
