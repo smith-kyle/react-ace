@@ -1,6 +1,6 @@
 {
   "name": "react-ace-2",
-  "version": "3.5.0",
+  "version": "3.5.1",
   "description": "A react component for Ace Editor",
   "main": "lib/ace.js",
   "scripts": {
@@ -19,7 +19,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
-    "presets": ["es2015", "react"]
+    "presets": [
+      "es2015",
+      "react"
+    ]
   },
   "author": "Kyle Smith",
   "license": "MIT",
