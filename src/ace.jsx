@@ -58,8 +58,8 @@ export default class ReactAce extends Component {
       this.editor[editorProps[i]] = this.props.editorProps[editorProps[i]];
     }
 
-    this.editor.getSession().setMode(`ace/mode/${mode}`);
-    this.editor.setTheme(`ace/theme/${theme}`);
+    this.editor.getSession().setMode(mode);
+    this.editor.setTheme(them);
     this.editor.setFontSize(fontSize);
     this.editor.setValue(value, cursorStart);
     this.editor.renderer.setShowGutter(showGutter);
