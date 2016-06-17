@@ -10,7 +10,7 @@ const editorOptions = [
   'tabSize',
   'enableBasicAutocompletion',
   'enableLiveAutocompletion',
-  'enableSnippets '
+  'enableSnippets ',
 ];
 
 export default class ReactAce extends Component {
@@ -59,7 +59,7 @@ export default class ReactAce extends Component {
     }
 
     this.editor.getSession().setMode(mode);
-    this.editor.setTheme(them);
+    this.editor.setTheme(theme);
     this.editor.setFontSize(fontSize);
     this.editor.setValue(value, cursorStart);
     this.editor.renderer.setShowGutter(showGutter);

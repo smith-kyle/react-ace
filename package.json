@@ -1,5 +1,5 @@
 {
-  "name": "react-ace",
+  "name": "react-ace-2",
   "version": "3.4.1",
   "description": "A react component for Ace Editor",
   "main": "lib/ace.js",
@@ -21,7 +21,7 @@
   "babel": {
     "presets": ["es2015", "react"]
   },
-  "author": "James Hrisho",
+  "author": "Kyle Smith",
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.5.2",
