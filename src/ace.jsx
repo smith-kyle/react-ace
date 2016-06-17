@@ -137,10 +137,9 @@ export default class ReactAce extends Component {
     this.editor = null;
   }
 
-  onChange() {
+  onChange(event) {
     if (this.props.onChange && !this.silent) {
-      const value = this.editor.getValue();
-      this.props.onChange(value);
+      this.props.onChange(event);
     }
   }
 
