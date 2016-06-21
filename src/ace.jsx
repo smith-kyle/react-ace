@@ -37,8 +37,6 @@ export default class ReactAce extends Component {
       mode,
       theme,
       fontSize,
-      value,
-      cursorStart,
       showGutter,
       wrapEnabled,
       showPrintMargin,
@@ -61,7 +59,6 @@ export default class ReactAce extends Component {
     this.editor.getSession().setMode(mode);
     this.editor.setTheme(theme);
     this.editor.setFontSize(fontSize);
-    this.editor.setValue(value, cursorStart);
     this.editor.renderer.setShowGutter(showGutter);
     this.editor.getSession().setUseWrapMode(wrapEnabled);
     this.editor.setShowPrintMargin(showPrintMargin);
@@ -123,12 +120,6 @@ export default class ReactAce extends Component {
     }
     if (!isEqual(nextProps.setOptions, oldProps.setOptions)) {
       this.handleOptions(nextProps);
-    }
-    if (this.editor && this.editor.getValue() !== nextProps.value) {
-      // editor.setValue is a synchronous function call, change event is emitted before setValue return.
-      this.silent = true;
-      this.editor.setValue(nextProps.value, nextProps.cursorStart);
-      this.silent = false;
     }
   }
 
@@ -209,7 +200,6 @@ ReactAce.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onScroll: PropTypes.func,
-  value: PropTypes.string,
   onLoad: PropTypes.func,
   onBeforeLoad: PropTypes.func,
   minLines: PropTypes.number,
@@ -240,7 +230,6 @@ ReactAce.defaultProps = {
   theme: '',
   height: '500px',
   width: '500px',
-  value: '',
   fontSize: 12,
   showGutter: true,
   onChange: null,
